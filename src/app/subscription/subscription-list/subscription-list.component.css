@@ -1,0 +1,87 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.subcard {
+  /* max-height: 500px; */
+  /* height: 500px; */
+  max-width: 221px;
+  margin: 0px 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  /* display: inline-flex; */
+}
+
+
+
+ img {
+   max-height: 250px;
+  object-fit: contain;
+}
+
+.mat-card-header .mat-card-title {
+  font-size: 14px;
+}
+
+.mat-card-title {
+  margin-bottom: 4px;
+}
+
+::ng-deep .mat-card-header-text {
+  /* CSS styles go here */
+  margin: 0px !important;
+}
+
+.price_currency {
+  font-size: .6em;
+  top: -0.5em;
+  margin-left: .2rem;
+  margin-right: .6rem;
+  text-decoration: none;
+}
+
+.original_price {
+  text-decoration: line-through;
+
+}
+
+.pill {
+  padding: 0 .5rem;
+  display: inline-block;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: rgba(0,0,0,.87);
+  background-color: #ffd740;
+  /* border: none; */
+  box-sizing: border-box;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  border-radius: 4px;
+}
+
+mat-card-footer {
+  margin: 0;
+  margin-top: auto;
+
+}
+
+.gotoBtn {
+  float: right;
+}
+
+button:focus { outline: none; }
+
+button.mat-icon-button {
+  /* display: inline; */
+  float: right;
+  margin: 5px 5px 0 0;
+  width: 24px;
+  height: 24px;
+}
+
+mat-icon {
+  /* display: inline; */
+  /* float: right; */
+  margin-top: -18px;
+}
