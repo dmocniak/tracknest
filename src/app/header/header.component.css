@@ -7,3 +7,16 @@ span {
   font-size: 2rem;
   font-weight: 100;
 }
+
+.header-left {
+  flex: 1 auto;
+}
+
+button {
+  margin-right: 1rem;
+}
+
+mat-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}

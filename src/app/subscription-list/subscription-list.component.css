@@ -1,0 +1,54 @@
+.subcard {
+  /* height: 700px; */
+  max-width: 250px;
+  margin: 0px 1rem 0px 0px;
+  display: flex;
+  flex-direction: column;
+  /* display: inline-flex; */
+}
+
+
+/*
+ img {
+  max-height: 500px;
+  width: 120%;
+  object-fit: cover;
+  margin: 0 auto;
+  vertical-align: top;
+}
+*/
+
+.mat-card-header .mat-card-title {
+  font-size: 14px;
+}
+
+::ng-deep .mat-card-header-text {
+  /* CSS styles go here */
+  margin: 0px !important;
+}
+
+mat-card-footer {
+  margin: 0;
+  margin-top: auto;
+
+}
+
+.gotoBtn {
+  float: right;
+}
+
+button:focus { outline: none; }
+
+button.mat-icon-button {
+  /* display: inline; */
+  float: right;
+  margin: 5px 5px 0 0;
+  width: 24px;
+  height: 24px;
+}
+
+mat-icon {
+  /* display: inline; */
+  /* float: right; */
+  margin-top: -18px;
+}

@@ -7,27 +7,29 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { SubscriptionListComponent } from './subscription-list/subscription-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatCardModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatExpansionModule,
-    MatIconModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [
-    AppComponent
-  ]
+   declarations: [
+      AppComponent,
+      HeaderComponent,
+      SubscriptionListComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      MatInputModule,
+      MatCardModule,
+      MatButtonModule,
+      MatToolbarModule,
+      MatExpansionModule,
+      MatIconModule,
+      HttpClientModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
