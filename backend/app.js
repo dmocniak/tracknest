@@ -45,8 +45,7 @@ app.get('/subscriptions', (req, res, next) => {
     res.status(200).json({
       message: 'GET successful',
       subs: prods
-    }
-    )
+    })
   }).catch();
 
   // Post.find()
@@ -80,7 +79,6 @@ async function checkPrice() {
         ]
       })
       .end();
-    console.log('nightmare finished');
     const productImg = productElements[0];
     const productTitle = productElements[1];
     const priceNumber = parseFloat(productElements[2].replace('$', ''));
@@ -88,8 +86,6 @@ async function checkPrice() {
     products[0].imgURL = productImg;
     products[0].title = productTitle;
     products[0].curPrice = priceNumber;
-
-    console.log(parseFloat(productElements[2].replace('$', '')));
 
 
     return products

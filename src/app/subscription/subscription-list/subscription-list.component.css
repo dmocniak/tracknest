@@ -1,3 +1,22 @@
+/* .filler {
+  height: 6rem;
+  margin-bottom: 1rem;
+} */
+
+.component_wrapper {
+  /* margin-top: 100px; */
+}
+
+.create_container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.create_container button {
+  width: 100%;
+  max-width: 700px;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -14,9 +33,7 @@ main {
   /* display: inline-flex; */
 }
 
-
-
- img {
+img {
    max-height: 250px;
   object-fit: contain;
 }

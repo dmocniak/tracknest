@@ -10,6 +10,7 @@ export class SubscriptionService {
   constructor(private http: HttpClient) { }
 
   private products = [];
+  stubbedProducts = [];
   private productsSubject = new Subject();
 
   getProducts() {

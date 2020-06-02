@@ -1,3 +1,8 @@
+mat-toolbar {
+  position: fixed;
+  /* top: 0rem; */
+}
+
 #logo {
   height: 5rem;
 }

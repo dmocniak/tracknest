@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from "../subscription.service";
 import { Subscription } from 'rxjs';
+import { stubbedSubscriptions } from "../stubbed-subscriptions";
 
 @Component({
   selector: 'app-subscription-list',
@@ -11,12 +12,21 @@ export class SubscriptionListComponent implements OnInit {
 
   constructor(public subService: SubscriptionService) { }
 
+  useStubbedData = true;
+
   products = [];
   subSubscription: Subscription;
 
   ngOnInit() {
-    this.subService.getProducts();
-    this.subService.getSubListener().subscribe((products: []) => { this.products = products });
+    if (!this.useStubbedData) {
+      this.subService.getProducts();
+      this.subService.getSubListener().subscribe((products: []) => { this.products = products });
+    } else {
+      console.log(stubbedSubscriptions);
+
+      this.products = stubbedSubscriptions;
+    }
+
   }
 
   gotoPage(url) {
