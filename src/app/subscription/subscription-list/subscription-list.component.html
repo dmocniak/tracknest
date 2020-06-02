@@ -1,7 +1,7 @@
 <!-- <div class="filler"></div> -->
 <div class="component_wrapper">
   <div class="create_container">
-    <button mat-raised-button>Add New Subscription</button>
+    <button mat-raised-button (click)="openDialog()">Add New Subscription</button>
   </div>
   <main>
     <mat-card class="subcard" *ngFor="let product of products">

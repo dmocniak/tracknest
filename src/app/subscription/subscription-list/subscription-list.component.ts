@@ -22,11 +22,8 @@ export class SubscriptionListComponent implements OnInit {
       this.subService.getProducts();
       this.subService.getSubListener().subscribe((products: []) => { this.products = products });
     } else {
-      console.log(stubbedSubscriptions);
-
       this.products = stubbedSubscriptions;
     }
-
   }
 
   gotoPage(url) {
@@ -38,6 +35,10 @@ export class SubscriptionListComponent implements OnInit {
     const originalPrice = parseFloat(ogPrice)
     const percentage = parseFloat(((originalPrice - currentPrice) / originalPrice * 100).toFixed(0))
     return percentage ? `-${percentage}%` : 'Not on Sale'
+  }
+
+  openDialog() {
+    this.subService.postNewSubscription();
   }
 
 
