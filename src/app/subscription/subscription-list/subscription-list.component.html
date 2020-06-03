@@ -1,35 +1,35 @@
-<!-- <div class="filler"></div> -->
-<div class="component_wrapper">
-  <div class="create_container">
-    <button mat-raised-button (click)="openDialog()">Add New Subscription</button>
-  </div>
-  <main>
-    <mat-card class="subcard" *ngFor="let product of products">
-        <!-- <button mat-icon-button color="warn">
-          <mat-icon>delete_forever</mat-icon>
-        </button>
-        <button mat-icon-button color="primary">
-          <mat-icon>edit</mat-icon>
-        </button> -->
-
-        <img mat-card-image src="{{ product.imgURL }}" alt="">
-
-        <mat-card-header>
-          <mat-card-title>{{ product.title }}</mat-card-title>
-        </mat-card-header>
-
-        <mat-card-content>
-          <mat-card-title>${{ product.curPrice }}</mat-card-title>
-          <mat-card-subtitle >
-            <span class="original_price">${{ product.ogPrice }}</span>
-            <sup class="price_currency">USD</sup>
-            <span class="pill">{{ getSalePercentage(product.curPrice, product.ogPrice) }}</span>
-          </mat-card-subtitle>
-        </mat-card-content>
-
-        <mat-card-footer>
-          <button mat-raised-button class="gotoBtn" color="primary" (click)="gotoPage(product.productURL)">Go To</button>
-        </mat-card-footer>
-    </mat-card>
-  </main>
+<div class="create_container">
+  <button mat-raised-button (click)="openDialog()">Add New Subscription</button>
 </div>
+<main>
+  <mat-card class="subcard" *ngFor="let product of products">
+
+    <span mat-card-image class="float_right">
+      <button mat-icon-button color="primary">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="onRemove(product.subID)">
+        <mat-icon>delete_forever</mat-icon>
+      </button>
+    </span>
+
+      <img mat-card-image src="{{ product.imgURL }}" alt="">
+
+      <mat-card-header>
+        <mat-card-title>{{ product.title }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-card-title>${{ product.curPrice }}</mat-card-title>
+        <mat-card-subtitle >
+          <span class="original_price">${{ product.ogPrice }}</span>
+          <sup class="price_currency">USD</sup>
+          <span class="pill">{{ getSalePercentage(product.curPrice, product.ogPrice) }}</span>
+        </mat-card-subtitle>
+      </mat-card-content>
+
+      <mat-card-footer>
+        <button mat-raised-button class="gotoBtn" color="primary" (click)="gotoPage(product.productURL)">Go To</button>
+      </mat-card-footer>
+  </mat-card>
+</main>

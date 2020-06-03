@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-createPopup',
@@ -9,14 +10,14 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class CreatePopupComponent implements OnInit {
 
   constructor(
-    public dialogRef: MatDialogRef<CreatePopupComponent>,
-    @Inject(MAT_DIALOG_DATA) public data) { }
+    public dialogRef: MatDialogRef<CreatePopupComponent>
+  ) { }
 
   ngOnInit() {
   }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  onNewSub(form: NgForm) {
+    this.dialogRef.close(form.form.value);
   }
 
 }

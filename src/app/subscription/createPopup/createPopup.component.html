@@ -1,12 +1,14 @@
 <h1 mat-dialog-title>Subscribe to New Product</h1>
-<div mat-dialog-content>
-  <!-- <p>Paragraph</p> -->
-  <mat-form-field>
-    <mat-label>Product URL</mat-label>
-    <input matInput value=(data.productURL)>
-  </mat-form-field>
-</div>
-<div mat-dialog-actions>
-  <button mat-raised-button (click)="onNoClick()">Cancel</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="data.productURL">Ok</button>
-</div>
+<form (submit)="onNewSub(subForm)" #subForm="ngForm">
+  <div mat-dialog-content>
+    <!-- <p>Paragraph</p> -->
+    <mat-form-field>
+      <mat-label>Product URL</mat-label>
+      <input matInput type="text" name="productURL" ngModel #productURL="ngModel" required>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" type="submit">Ok</button>
+  </div>
+</form>

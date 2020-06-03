@@ -3,10 +3,6 @@
   margin-bottom: 1rem;
 } */
 
-.component_wrapper {
-  /* margin-top: 100px; */
-}
-
 .create_container {
   margin-bottom: 2rem;
   text-align: center;
@@ -34,7 +30,8 @@ main {
 }
 
 img {
-   max-height: 250px;
+  margin-top: -1rem;
+  max-height: 250px;
   object-fit: contain;
 }
 
@@ -90,15 +87,27 @@ mat-card-footer {
 button:focus { outline: none; }
 
 button.mat-icon-button {
-  /* display: inline; */
-  float: right;
+  /* position: relative; */
   margin: 5px 5px 0 0;
   width: 24px;
   height: 24px;
 }
 
 mat-icon {
-  /* display: inline; */
-  /* float: right; */
   margin-top: -18px;
+}
+
+.float_right {
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+  background-color: white;
+  background: -webkit-linear-gradient(white, white, rgba(255, 255, 255, 0.691), rgba(255, 255, 255, 0));
+}
+
+mat-card:hover .float_right {
+  opacity: 1;
 }

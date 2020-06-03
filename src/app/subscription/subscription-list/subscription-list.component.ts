@@ -12,7 +12,7 @@ export class SubscriptionListComponent implements OnInit {
 
   constructor(public subService: SubscriptionService) { }
 
-  useStubbedData = true;
+  useStubbedData = false;
 
   products = [];
   subSubscription: Subscription;
@@ -40,6 +40,12 @@ export class SubscriptionListComponent implements OnInit {
   openDialog() {
     this.subService.postNewSubscription();
   }
+
+  onRemove(id: string) {
+    console.log('sub-list id = ', id);
+
+    this.subService.removeProduct(id);
+  };
 
 
 }

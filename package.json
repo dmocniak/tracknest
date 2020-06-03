@@ -26,6 +26,7 @@
     "bootstrap": "^4.5.0",
     "core-js": "^2.5.4",
     "dotenv": "^8.2.0",
+    "mongoose": "^5.9.17",
     "nightmare": "^3.0.2",
     "nodemon": "^2.0.4",
     "rxjs": "~6.3.3",
