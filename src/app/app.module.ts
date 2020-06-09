@@ -7,17 +7,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { SubscriptionListComponent } from './subscription/subscription-list/subscription-list.component';
 import { CreatePopupComponent } from "./subscription/createPopup/createPopup.component";
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     SubscriptionListComponent,
-    CreatePopupComponent
-
+    CreatePopupComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +32,9 @@ import { CreatePopupComponent } from "./subscription/createPopup/createPopup.com
     HttpClientModule,
     MatDialogModule
   ],
-  entryComponents: [CreatePopupComponent],
+  entryComponents: [
+    CreatePopupComponent
+  ],
   providers: [],
   bootstrap: [
     AppComponent

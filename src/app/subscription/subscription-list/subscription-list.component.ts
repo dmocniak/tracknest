@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { SubscriptionService } from "../subscription.service";
 import { Subscription } from 'rxjs';
 import { stubbedSubscriptions } from "../stubbed-subscriptions";
@@ -12,7 +12,7 @@ export class SubscriptionListComponent implements OnInit {
 
   constructor(public subService: SubscriptionService) { }
 
-  useStubbedData = false;
+  useStubbedData = true;
 
   products = [];
   subSubscription: Subscription;
@@ -46,6 +46,16 @@ export class SubscriptionListComponent implements OnInit {
 
     this.subService.removeProduct(id);
   };
+
+  @HostListener('window:scroll', ['$event'])
+  onScrollEvent($event) {
+    const createBTN = document.getElementById('createBTN');
+    if (window.pageYOffset >= 54) {
+      createBTN.classList.remove("hide");
+    } else if (window.pageYOffset < 54) {
+      createBTN.classList.add("hide");
+    }
+  }
 
 
 }

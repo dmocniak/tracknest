@@ -4,6 +4,15 @@ mat-toolbar {
   z-index: 100;
 }
 
+a {
+  color: white;
+  text-decoration: none
+}
+
+.filler {
+  height: 4rem;
+}
+
 #logo {
   height: 5rem;
 }
@@ -20,6 +29,12 @@ mat-toolbar {
 
 .center_span button {
   right: 4.5rem;
+  transition-duration: 200ms;
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 button.mat-icon-button {
@@ -32,8 +47,8 @@ mat-icon {
 }
 
 main {
-  width: 80%;
+  /* width: 80%; */
   margin: 0 auto;
-  margin-top: 5rem;
+  /* padding-top: 4rem; */
   z-index: 1;
 }

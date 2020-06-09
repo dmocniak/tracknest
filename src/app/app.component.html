@@ -1,24 +1,20 @@
 <mat-toolbar color="primary">
-  <span class="left_span">
-    <img id="logo" src="../../assets/images/logo/vector/isolated-layout-b.svg" alt="" srcset="">
-    TrackNest
-  </span>
+  <a routerLink="">
+    <span class="left_span">
+      <img id="logo" src="../../assets/images/logo/vector/isolated-layout-b.svg" alt="" srcset="">
+      TrackNest
+    </span>
+  </a>
   <span class="center_span">
-    <button mat-stroked-button
-     data-aos="fade-up"
-     data-aos-duration="200"
-     data-aos-offset="-30"
-     data-aos-anchor="#aostrigger"
-     data-aos-anchor-placement="top-top"
-     (click)="openDialog()">
-      Add New Subscription</button>
+    <button id="createBTN" mat-stroked-button class="hide" (click)="openDialog()">Add New Subscription</button>
   </span>
   <span class="right_span">
-    <button mat-icon-button>
+    <button mat-icon-button routerLink="/account" (click)="onNavigateAccount()">
       <mat-icon>account_box</mat-icon>
     </button>
   </span>
 </mat-toolbar>
-<main id="aostrigger">
-  <app-subscription-list></app-subscription-list>
+<div class="filler"></div>
+<main>
+  <router-outlet></router-outlet>
 </main>
